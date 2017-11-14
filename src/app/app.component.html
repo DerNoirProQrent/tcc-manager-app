@@ -1,5 +1,14 @@
-<h1>tcc Manager App</h1>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-12">
+      <h1>tcc Manager App</h1>
 
-<p>Anzahl Trainings: {{trainings.length}}</p>
-
-<app-training-list [trainingsArray]="trainings"></app-training-list>
+      <p>Anzahl Trainings: {{trainings.length}}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-3">
+      <app-training-list [trainingsArray]="trainings"></app-training-list>
+    </div>
+  </div>
+</div>

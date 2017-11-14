@@ -20,6 +20,11 @@ export class AppComponent {
                 id: 2,
                 name: 'TypeScript',
                 description: 'Lorem Ipsum de lorm TypeScript'
+            },
+            {
+                id: 2,
+                name: 'JavaScript',
+                description: 'Lorem Ipsum de lorm JavaScript'
             }
         ];
     }
