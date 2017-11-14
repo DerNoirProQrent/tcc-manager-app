@@ -2,10 +2,4 @@
 
 <p>Anzahl Trainings: {{trainings.length}}</p>
 
-<ul>
-  <li *ngFor="let t of trainings">
-    <strong>{{t.name}}</strong>
-    <p>{{t.description}}</p>
-  </li>
-</ul>
-<app-training-list></app-training-list>
+<app-training-list [trainingsArray]="trainings"></app-training-list>
