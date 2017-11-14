@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Training } from './trainings/training.model';
+import { Training } from "./trainings/training.model";
 
 @Component({
     selector: 'app-root',
@@ -7,19 +7,20 @@ import { Training } from './trainings/training.model';
     styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-    public trainings: Training[] = [
-        {
-            id: 1,
-            name: "Angular"
-        },
-        {
-            id: 2,
-            name: "TypeScript"
-        }
-    ];
+    public trainings: Training[];
 
     constructor() {
-        
+        this.trainings = [
+            {
+                id: 1,
+                name: 'Angular',
+                description: 'Lorem Ipsum de lorm Angular'
+            },
+            {
+                id: 2,
+                name: 'TypeScript',
+                description: 'Lorem Ipsum de lorm TypeScript'
+            }
+        ];
     }
-
 }
