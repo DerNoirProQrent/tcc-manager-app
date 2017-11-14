@@ -1,5 +1,8 @@
 <ul class="list-group">
-  <li class="list-group-item list-group-item-action trainings-list" *ngFor="let t of trainingsArray" (click)="onListItemClicked($event, t)">
+  <li
+      *ngFor="let t of trainingsArray"
+      class="list-group-item list-group-item-action trainings-list {{activeTraining === t.id ? 'active' : ''}}"
+      (click)="onListItemClicked($event, t)">
     <strong>{{t.name}}</strong>
   </li>
 </ul>

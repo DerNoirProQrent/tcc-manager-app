@@ -15,17 +15,24 @@ export class AppComponent {
             {
                 id: 1,
                 name: 'Angular',
-                description: 'Lorem Ipsum de lorm Angular'
+                imageUrl: 'assets/images/trainings/angular2-shield.svg',
+                description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna'
             },
             {
                 id: 2,
                 name: 'TypeScript',
-                description: 'Lorem Ipsum de lorm TypeScript'
+                imageUrl: 'assets/images/trainings/typescript-logo.svg',
+                description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna'
             },
             {
-                id: 2,
+                id: 3,
                 name: 'JavaScript',
-                description: 'Lorem Ipsum de lorm JavaScript'
+                description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna'
+            },
+            {
+                id: 4,
+                name: 'PHP',
+                description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna'
             }
         ];
     }

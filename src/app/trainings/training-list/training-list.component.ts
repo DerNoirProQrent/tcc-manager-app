@@ -9,11 +9,13 @@ import { Training } from '../training.model';
 export class TrainingListComponent implements OnInit {
     @Input() public trainingsArray: Training[];
     @Output() public  trainingSelected = new EventEmitter<Training>();
+    activeTraining: number;
 
     constructor() {
     }
 
     onListItemClicked($event: MouseEvent, training: Training) {
+        this.activeTraining = training.id;
         this.trainingSelected.emit(training);
     }
 
