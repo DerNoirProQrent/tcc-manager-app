@@ -8,7 +8,13 @@
   </div>
   <div class="row">
     <div class="col-lg-3">
-      <app-training-list [trainingsArray]="trainings"></app-training-list>
+      <app-training-list
+        [trainingsArray]="trainings"
+        (trainingSelected)="onItemClick($event)"
+      ></app-training-list>
+    </div>
+    <div class="col-lg-3">
+      <app-training-details [trainingDetail]="clickedTraining" *ngIf="clickedTraining"></app-training-details>
     </div>
   </div>
 </div>

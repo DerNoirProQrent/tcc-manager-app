@@ -8,6 +8,7 @@ import { Training } from "./trainings/training.model";
 })
 export class AppComponent {
     public trainings: Training[];
+    public clickedTraining: Training;
 
     constructor() {
         this.trainings = [
@@ -27,5 +28,9 @@ export class AppComponent {
                 description: 'Lorem Ipsum de lorm JavaScript'
             }
         ];
+    }
+
+    onItemClick(training: Training) {
+        this.clickedTraining = training;
     }
 }

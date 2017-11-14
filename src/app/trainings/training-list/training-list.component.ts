@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { Training } from '../training.model';
 
 @Component({
@@ -8,12 +8,13 @@ import { Training } from '../training.model';
 })
 export class TrainingListComponent implements OnInit {
     @Input() public trainingsArray: Training[];
+    @Output() public  trainingSelected = new EventEmitter<Training>();
 
     constructor() {
     }
 
     onListItemClicked($event: MouseEvent, training: Training) {
-      console.log($event, training);
+        this.trainingSelected.emit(training);
     }
 
     ngOnInit() {
