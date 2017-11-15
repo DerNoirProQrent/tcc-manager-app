@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Training } from "./trainings/training.model";
 import { TrainingService } from './trainings/training.service';
 
@@ -12,10 +12,13 @@ export class AppComponent {
     public trainingDetailItem: Training;
 
     constructor(private trainingService: TrainingService) {
-        this.trainings = trainingService.getAll();
     }
 
     onItemClick(training: Training) {
         this.trainingDetailItem = training;
+    }
+
+    ngOnInit() {
+        this.trainings = this.trainingService.getAll();
     }
 }
