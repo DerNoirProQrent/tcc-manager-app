@@ -4,13 +4,13 @@
       <div class="col-lg-12">
         <h1>tcc Manager App</h1>
 
-        <p>Anzahl Trainings: {{trainings.length}}</p>
+        <p>Anzahl Trainings: {{trainingsCount | async}}</p>
       </div>
     </div>
     <div class="row">
       <div class="col-lg-3">
         <app-training-list
-          [trainingsCollection]="trainings"
+          [trainingsCollection]="trainings | async"
           (trainingSelected)="onItemClick($event)"
         ></app-training-list>
       </div>
