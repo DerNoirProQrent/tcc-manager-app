@@ -6,12 +6,17 @@
       [src]="trainingDetail.imageUrl"
     >
     <h4 class="card-title">{{trainingDetail.name}}</h4>
-    <input [(ngModel)]="trainingDetail.name">
+    <p class="card-text">
+      <input [(ngModel)]="trainingDetail.name">
+    </p>
     <strong
       class="card-text text-danger"
       *ngIf="trainingDetail.discontinued === true"
     >Training ausgebucht</strong>
-    <p class="card-text">Termin: {{trainingDetail.nextRun | date:'dd.MM.yyy'}}</p>
+    <p
+      class="card-text"
+      [class.text-danger]="trainingDetail.nextRun | takePlaceSoon"
+    >Termin: {{trainingDetail.nextRun | date:'dd.MM.yyy'}}</p>
     <p class="card-text">{{trainingDetail.description}}</p>
   </div>
 </div>

@@ -12,15 +12,15 @@ export const TRAININGS = [
         name: 'TypeScript',
         imageUrl: 'assets/images/trainings/typescript-logo.svg',
         description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna',
-        discontinued: true,
-        nextRun: '2017-10-05'
+        discontinued: false,
+        nextRun: '2017-11-24'
     },
     {
         id: 3,
         name: 'JavaScript',
         description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna',
         discontinued: false,
-        nextRun: '2017-12-13'
+        nextRun: '2017-11-18'
     },
     {
         id: 4,
