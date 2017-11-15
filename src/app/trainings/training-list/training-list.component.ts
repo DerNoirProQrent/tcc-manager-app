@@ -7,15 +7,15 @@ import { Training } from '../training.model';
     styleUrls: ['./training-list.component.css'],
 })
 export class TrainingListComponent implements OnInit {
-    @Input() public trainingsArray: Training[];
+    @Input() public trainingsCollection: Training[];
     @Output() public  trainingSelected = new EventEmitter<Training>();
-    activeTraining: number;
+    activeTraining: Training;
 
     constructor() {
     }
 
     onListItemClicked($event: MouseEvent, training: Training) {
-        this.activeTraining = training.id;
+        this.activeTraining = training;
         this.trainingSelected.emit(training);
     }
 

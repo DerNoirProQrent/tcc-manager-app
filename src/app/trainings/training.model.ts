@@ -3,4 +3,5 @@ export interface Training {
     name: string;
     imageUrl?: string;
     description?: string;
+    discontinued: boolean;
 }

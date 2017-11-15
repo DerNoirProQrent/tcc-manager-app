@@ -1,8 +1,10 @@
 <ul class="list-group">
   <li
-      *ngFor="let t of trainingsArray"
-      class="list-group-item list-group-item-action trainings-list {{activeTraining === t.id ? 'active' : ''}}"
-      (click)="onListItemClicked($event, t)">
-    <strong>{{t.name}}</strong>
+      *ngFor="let training of trainingsCollection"
+      class="list-group-item list-group-item-action trainings-list"
+      [class.disabled]="training.discontinued"
+      [class.active]="activeTraining && activeTraining.id === training.id"
+      (click)="onListItemClicked($event, training)">
+    <strong>{{training.name}}</strong>
   </li>
 </ul>

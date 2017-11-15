@@ -10,12 +10,15 @@
     <div class="row">
       <div class="col-lg-3">
         <app-training-list
-          [trainingsArray]="trainings"
+          [trainingsCollection]="trainings"
           (trainingSelected)="onItemClick($event)"
         ></app-training-list>
       </div>
       <div class="col-lg-3">
-        <app-training-details [trainingDetail]="clickedTraining" *ngIf="clickedTraining"></app-training-details>
+        <app-training-details
+          [trainingDetail]="trainingDetailItem"
+          *ngIf="trainingDetailItem"
+        ></app-training-details>
       </div>
     </div>
   </div>

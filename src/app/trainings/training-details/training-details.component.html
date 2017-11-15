@@ -1,8 +1,16 @@
 <div class="card">
   <div class="card-body">
-    <img class="card-img-top" *ngIf="trainingDetail.imageUrl" [src]="trainingDetail.imageUrl">
+    <img
+      class="card-img-top"
+      *ngIf="trainingDetail.imageUrl"
+      [src]="trainingDetail.imageUrl"
+    >
     <h4 class="card-title">{{trainingDetail.name}}</h4>
-    <p class="card-text">Trainings-ID: {{trainingDetail.id}}</p>
+    <input [(ngModel)]="trainingDetail.name">
+    <strong
+      class="card-text text-danger"
+      *ngIf="trainingDetail.discontinued === true"
+    >Training ausgebucht</strong>
     <p class="card-text">{{trainingDetail.description}}</p>
   </div>
 </div>
