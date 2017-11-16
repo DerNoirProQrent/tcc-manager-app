@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { routes } from './app.routes';
+
 
 import { AppComponent } from './app.component';
 import { TrainingsModule } from './trainings/trainings.module';
@@ -9,6 +12,7 @@ import { TrainingsModule } from './trainings/trainings.module';
     AppComponent
   ],
   imports: [
+    RouterModule.forRoot(routes),
     BrowserModule,
     TrainingsModule
   ],

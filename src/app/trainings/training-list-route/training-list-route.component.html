@@ -1,0 +1,4 @@
+<app-training-list
+  [trainingsCollection]="trainings | async"
+  (trainingSelected)="onItemClick($event)"
+></app-training-list>

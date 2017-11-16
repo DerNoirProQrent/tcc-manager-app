@@ -4,7 +4,12 @@
       class="list-group-item list-group-item-action trainings-list"
       [class.disabled]="training.discontinued"
       [class.active]="activeTraining && activeTraining.id === training.id"
-      (click)="onListItemClicked($event, training)">
+  >
     <strong>{{training.name}}</strong>
+    <a class="float-right" [routerLink]="['/training',training.id]">&raquo; zum Training</a>
+  </li>
+  <li class="list-group-item list-group-item-action trainings-list disabled">
+    <strong>Nicht verfügbar</strong>
+    <a class="float-right" [routerLink]="['/training','200']">&raquo; zum Training</a>
   </li>
 </ul>

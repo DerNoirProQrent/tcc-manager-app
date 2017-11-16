@@ -1,0 +1,12 @@
+<a [routerLink]="['/training']">zurück zur Übersicht</a>
+
+<app-training-details
+  [trainingDetail]="trainingDetailItem"
+  *ngIf="trainingDetailItem"
+></app-training-details>
+
+
+<div *ngIf="hasWrongId" class="alert alert-danger" role="alert">
+  <h4 class="alert-heading">Achtung</h4>
+  <p>Das von Ihnen gewählte Training ist nicht mehr verfügbar!</p>
+</div>

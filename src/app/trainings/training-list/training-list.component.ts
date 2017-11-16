@@ -14,11 +14,6 @@ export class TrainingListComponent implements OnInit {
     constructor() {
     }
 
-    onListItemClicked($event: MouseEvent, training: Training) {
-        this.activeTraining = training;
-        this.trainingSelected.emit(training);
-    }
-
     ngOnInit() {
     }
 
