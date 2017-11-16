@@ -4,4 +4,5 @@ export interface Training {
     imageUrl?: string;
     description?: string;
     discontinued: boolean;
+    nextRun: string;
 }
